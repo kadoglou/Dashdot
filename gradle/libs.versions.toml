@@ -1,0 +1,161 @@
+[versions]
+### ---- Kotlin version
+datetimeWheelPicker = "1.1.0-alpha03-compose1.8"
+kotlin = "2.1.20"
+
+### ---- Gradle
+agp = "8.9.1"
+
+### ---- Android settings
+android-compileSdk = "35"
+android-minSdk = "26"
+android-targetSdk = "35"
+
+### ---- Libraries
+
+# Android
+androidx-activityCompose = "1.10.1"
+
+# Coil
+coil = "3.1.0"
+
+# Firebase
+firebase = "33.12.0"
+credentials = "1.5.0"
+googleid = "1.1.1"
+playServicesAuth = "21.3.0"
+
+# GitLive
+gitlive = "2.1.0"
+
+# Koin
+koin = "4.0.1"
+
+# KotlinX Libraries
+coroutines = "1.10.2"
+datetime = "0.6.2"
+serialization = "1.8.0"
+
+# KmpAuth
+kmpauth = "2.3.1"
+
+# Kmp libraries from AndroidX
+androidx-lifecycle = "2.9.0-alpha05"
+navigation = "2.9.0-alpha15"
+
+# Moko for permissions + some lifecycle libraries required by moko
+moko = "0.19.1"
+lifecycleViewModel = "2.8.7"
+lifecycleViewModelCompose = "2.8.3"
+
+# Room libraries
+sqlite = "2.5.0"
+room = "2.7.1"
+
+# My tools
+myTools = "0.3.22"
+
+### ---- Plugins
+compose-multiplatform = "1.8.0-rc01"
+googleServices = "4.4.2"
+ksp = "2.1.20-1.0.32"
+compose = "1.8.0-rc01"
+backhandler = "1.8.0-beta02"
+
+[libraries]
+# Android
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
+
+# Coil
+coil_compose = { group = "io.coil-kt.coil3", name = "coil-compose", version.ref = "coil" }
+
+# Firebase
+wheel-picker = { module = "io.github.darkokoa:datetime-wheel-picker", version.ref = "datetimeWheelPicker" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore" }
+androidx-credentials = { group = "androidx.credentials", name = "credentials", version.ref = "credentials" }
+androidx-credentials-play-services = { group = "androidx.credentials", name = "credentials-play-services-auth", version.ref = "credentials" }
+googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
+
+# Gitlive
+gitlive-authentication = { group = "dev.gitlive", name = "firebase-auth", version.ref = "gitlive" }
+gitlive-database = { group = "dev.gitlive", name = "firebase-database", version.ref = "gitlive" }
+gitlive-firestore = { group = "dev.gitlive", name = "firebase-firestore", version.ref = "gitlive" }
+
+# Koin
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin" }
+koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koin" }
+
+# KotlinX libraries
+kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "datetime" }
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+
+# Kmp libraries from AndroidX
+androidx-lifecycle-viewmodel = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-runtime-compose = { group = "org.jetbrains.androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+compose-navigation = { group = "org.jetbrains.androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
+
+# KmpAuth
+kmpauth-google = { group = "io.github.mirzemehdi", name = "kmpauth-google", version.ref = "kmpauth" }
+kmpauth-firebase = { group = "io.github.mirzemehdi", name = "kmpauth-firebase", version.ref = "kmpauth" }
+kmpauth-uihelper = { group = "io.github.mirzemehdi", name = "kmpauth-uihelper", version.ref = "kmpauth" }
+
+# Moko for permissions + some lifecycle libraries required by moko
+moko-permissions-core = { module = "dev.icerock.moko:permissions", version.ref = "moko" }
+moko-permissions-contacts = { group = "dev.icerock.moko", name = "permissions-contacts", version.ref = "moko" }
+moko-permissions-compose = { module = "dev.icerock.moko:permissions-compose", version.ref = "moko" }
+lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycleViewModel" }
+lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewModelCompose" }
+
+# Room
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-runtime-android = { module = "androidx.room:room-runtime-android", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+sqlite-bundled = { module = "androidx.sqlite:sqlite-bundled", version.ref = "sqlite" }
+ui-backhandler = { group = "org.jetbrains.compose.ui", name = "ui-backhandler", version.ref = "backhandler" }
+
+# My tools
+
+kitos14-destination = { group = "com.kitos14.tools", name = "navigation", version.ref = "myTools" }
+multiTab-core = { group = "com.kitos14.tools", name = "core", version.ref = "myTools" }
+multiTab-ui = { group = "com.kitos14.tools", name = "ui", version.ref = "myTools" }
+
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+compose-gradle-plugin = { module = "org.jetbrains.compose:org.jetbrains.compose.gradle.plugin", version.ref = "compose" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+googleServices = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+room = { id = "androidx.room", version.ref = "room" }
+
+
+# Custom Gradle Plugins
+convention-androidTarget = { id = "convention.android.target" }
+convention-iosTarget = { id = "convention.ios.target" }
+convention-multiplatformTarget = { id = "convention.multiplatform.target" }
+convention-compose = { id = "convention.compose" }
+convention-serialization = { id = "convention.serialization" }
+convention-dependencyInjection = { id = "convention.dependency.injection" }
+convention-global-dependencyInjection = { id = "convention.global.dependency.injection" }
+convention-applicationEntry = { id = "convention.application.entry"}
+
+convention-feature-destination = { id = "convention.feature.destination" }
+convention-feature-viewmodel = { id = "convention.feature.viewmodel" }
+convention-feature-ui = { id = "convention.feature.ui" }
+
+[bundles]
+lifecycle = ["lifecycle-viewmodel", "lifecycle-viewmodel-compose"]
+moko-permissions = ["moko-permissions-core", "moko-permissions-compose", "moko-permissions-contacts"]

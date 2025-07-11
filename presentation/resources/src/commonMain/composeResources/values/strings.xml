@@ -1,0 +1,27 @@
+<resources>
+    <!-- region Buttons   -->
+
+    <string name="done">Done</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+
+    <!-- endregion   -->
+
+
+    <!-- region Screen Titles   -->
+
+    <string name="overview_screen_title">Overview</string>
+    <string name="schedule">Schedule</string>
+    <string name="tasks_screen_title">Tasks</string>
+
+    <!-- endregion   -->
+
+
+    <!-- region Section Titels   -->
+
+    <string name="section_title_weekly_schedule">Weekly Schedule</string>
+    <string name="section_title_note">Note</string>
+
+    <!-- endregion   -->
+
+</resources>
