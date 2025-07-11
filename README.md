@@ -1,14 +1,39 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+## Dashdot – A Minimal Open Source Note-Taking App  
+**Developed & Designed by Konstantinos Kadoglou**
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+---
 
+### 🚧 Project Status
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+Dashdot is an experimental, personal project exploring architectural patterns in Kotlin Multiplatform (KMP) development. The ultimate goal is to make it a fully functional cross-platform note-taking app.
+
+Right now, it’s in active development. Expect frequent updates to the roadmap, architecture, and features. Along the way, I’ll share some UI/UX decisions, design guidelines, and maybe even some mockups.
+
+---
+
+### 💡 Tech Stack
+
+- **Compose Multiplatform (CMP)**  
+  Used for the UI across platforms. Android support is smooth, and while iOS isn’t as plug-and-play as APKs, it’s still supported.
+
+- **Kotlin Multiplatform (KMP)**  
+  A single codebase, written entirely in Kotlin, powering all platforms.
+
+- **Firebase**  
+  Chosen for now as the quickest way to get things up and running. You’re free to swap it out with your preferred backend/database. You can swap the firebase configs with your own files and use your firebase database. 
+
+---
+
+### 🧭 Goals
+
+- Build a clean, modular KMP architecture
+- Ensure the app is easily extensible for contributors
+- Provide design mockups and UX patterns as the UI evolves
+- Deliver a smooth experience on Android and iOS.
+
+---
+
+### 🤝 Contributions
+
+For now, this is more of a personal playground. But if you’re curious, feel free to watch the repo, open issues, or suggest ideas. Contributions may be welcome once the foundation is more stable.
