@@ -44,87 +44,112 @@ config:
 flowchart TD
 
   %% Presentation Layer
-  subgraph Presentation["📦 Presentation"]
+  subgraph Presentation["📁 Presentation"]
     resources
     Core
-    Features
+    Features["📁 Features"]
+  end
+  subgraph Feature2["📁 ..."]
+  end
+
+  subgraph Feature1["📁 Feature 1"]
+    destination["📦 destination"]
+    logic["📦 logic"]
+    ui["📦 ui"]
+
+  end
+  subgraph Features
+    Feature1
+    Feature2
+  end
+
+  subgraph Core["📁 Core"]
+    components["📦 components"]
+    composeUtils["📦 composeUtils"]
+    navigation["📦 navigation"]
+  end
+
+  subgraph resources["📦 resources"]
   end
 
   %% Domain Layer
-  subgraph Domain["📦 Domain"]
+  subgraph Domain["Domain"]
     Repositories
     UseCases
   end
 
   %% Data Layer
-  subgraph Data["📦 Data"]
+  subgraph Data["Data"]
     Sources
   end
 
   %% Sources Layer
-  subgraph Sources["📦 Sources"]
+  subgraph Sources["Sources"]
     Local
     Rest
     System
   end
 
   %% System Layer
-  subgraph System["📦 System"]
-    Sys1["sys1"]
-    Sys2["sys2"]
-    Sys3["..."]
+  subgraph System["📁 System"]
+    Sys1["📦 sys1"]
+    Sys3["📦 ..."]
   end
 
   %% API Layer
-  subgraph API["📦 API"]
-    API1["api1"]
-    API2["api2"]
-    APIX["..."]
+  subgraph API["📁 API"]
+    API1["📦 api1"]
+    APIX["📦 ..."]
   end
 
   %% Rest Layer
-  subgraph Rest["📦 Rest"]
-    client --> API1
-    client --> API2
+  subgraph Rest["📁 Rest"]
+    client["📦 client"] --> API1
     client --> APIX
     API
   end
 
   %% DAO Layer
-  subgraph DAO["📦 DAO"]
-    DAO1["dao1"]
-    DAO2["dao2"]
-    DAOX["..."]
+  subgraph DAO["📁 DAO"]
+    DAO1["📦 dao1"]
+    DAOX["📦 ..."]
   end
 
   %% Local Layer
-  subgraph Local["📦 Local"]
-    database --> DAO1
-    database --> DAO2
+  subgraph Local["📁 Local"]
+    database["📦 database"] --> DAO1
     database --> DAOX
     DAO
   end
 
   %% Repositories Layer
-  subgraph Repositories
-    Repo1["repo1"]
-    Repo2["repo2"]
-    Repo3["..."]
+  subgraph Repositories["📁 Repositories"]
+    Repo1["📦 repo1"]
+    Repo3["📦 ..."]
   end
 
   %% Use Cases Layer
-  subgraph UseCases["📦 UseCases"]
-    UC1["group1"]
-    UC2["group2"]
-    UC3["..."]
+  subgraph UseCases["📁 UseCases"]
+    UC1["📦 group1"]
+    UC3["📦 ..."]
   end
 
   %% Data Flow
   DAO --> Repositories
   API --> Repositories
   System --> Repositories
-  Repositories --> UseCases
-  Domain --> Presentation
+  Repositories --> UseCases & logic
+  UseCases --> logic
+  Core --> Features
+  resources --> Core
+  resources --> Features
+  logic --> destination & ui
+  destination --> ui
+
+  %% Helper Flows
+  Domain ~~~  Presentation
+  Core ~~~ logic
+
 
   %% Styling
   style Data fill:#f8ebff,stroke:#f8ebff,stroke-width:2px
@@ -140,6 +165,12 @@ flowchart TD
   style UseCases fill:#bfdcff,stroke:#6e6e6e,stroke-width:2px
 
   style Presentation fill:#d4ffe9,stroke:#d4ffe9,stroke-width:2px
+  style Core fill:#aaffd4, stroke:#6e6e6e, stroke-width:2px
+  style Features fill:#aaffd4, stroke:#6e6e6e, stroke-width:2px
+  style Feature1 fill:#69feb2, stroke:#6e6e6e, stroke-width:2px
+  style Feature2 fill:#69feb2, stroke:#6e6e6e, stroke-width:2px
+
+
 ```
 
 ### 🤝 Contributions
