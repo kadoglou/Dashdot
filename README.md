@@ -173,6 +173,27 @@ flowchart TD
 
 ```
 
+---
+
+### 📋 Tasks
+#### Technical documentation
+- [x] Architecture multi-module diagram.
+- [ ] Explanation of each module.
+- [ ] Explain relationship between modules.
+- [ ] How to use your own Firebase explanation.
+- [ ] Write down a list of the tools used for the project, like Koin, RoomDB etc...
+#### Gradle scripts
+- [ ] Re-organize scripts in packages.
+- [ ] Check and refactor duplication of code.
+#### Design
+- [ ] Add design documentation.
+- [ ] Showcase app in ReadMe.
+#### Project - Code
+- [ ] Define a roadmap of features.
+- [ ] Currently there is a a private library used for screen navigation. Either I have to make that library public and release on maven, or completely get rid of it.
+- [ ] Introduce unit tests.
+---
+
 ### 🤝 Contributions
 
 For now, this is more of a personal playground. But if you’re curious, feel free to watch the repo, open issues, or suggest ideas. Contributions may be welcome once the foundation is more stable.
