@@ -14,60 +14,60 @@ gradlePlugin {
 
         register("applicationEntry") {
             id = libs.plugins.convention.applicationEntry.get().pluginId
-            implementationClass = "ApplicationEntryConventionPlugin"
+            implementationClass = "other.ApplicationEntryCP"
         }
 
         register("androidTarget") {
             id = libs.plugins.convention.androidTarget.get().pluginId
-            implementationClass = "AndroidTargetConventionPlugin"
+            implementationClass = "target.AndroidTargetCP"
         }
 
 
         register("iosTarget") {
             id = libs.plugins.convention.iosTarget.get().pluginId
-            implementationClass = "IosTargetConventionPlugin"
+            implementationClass = "target.IosTargetCP"
         }
 
 
         register("multiplatformTarget") {
             id = libs.plugins.convention.multiplatformTarget.get().pluginId
-            implementationClass = "MultiplatformTargetConventionPlugin"
+            implementationClass = "target.MultiplatformTargetCP"
         }
 
         register("compose") {
             id = libs.plugins.convention.compose.get().pluginId
-            implementationClass = "ComposeConventionPlugin"
+            implementationClass = "plugins.ComposeCP"
         }
 
         register("serialization") {
             id = libs.plugins.convention.serialization.get().pluginId
-            implementationClass = "SerializationConventionPlugin"
+            implementationClass = "plugins.SerializationCP"
         }
 
 
         register("dependencyInjection") {
             id = libs.plugins.convention.dependencyInjection.get().pluginId
-            implementationClass = "DependencyInjectionConventionPlugin"
+            implementationClass = "other.DependencyInjectionCP"
         }
 
         register("globalDependencyInjection") {
             id = libs.plugins.convention.global.dependencyInjection.get().pluginId
-            implementationClass = "GlobalDependencyInjectionConventionPlugin"
+            implementationClass = "other.GlobalDependencyInjectionCP"
         }
 
         register("featureDestination") {
             id = libs.plugins.convention.feature.destination.get().pluginId
-            implementationClass = "FeatureDestinationConventionPlugin"
+            implementationClass = "feature.DestinationCP"
         }
 
         register("featureViewModel") {
             id = libs.plugins.convention.feature.viewmodel.get().pluginId
-            implementationClass = "FeatureViewModelConventionPlugin"
+            implementationClass = "feature.ViewModelCP"
         }
 
         register("featureUi") {
             id = libs.plugins.convention.feature.ui.get().pluginId
-            implementationClass = "FeatureUiConventionPlugin"
+            implementationClass = "feature.UiCP"
         }
     }
 }

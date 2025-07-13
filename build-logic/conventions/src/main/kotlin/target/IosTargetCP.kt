@@ -1,19 +1,26 @@
-import org.gradle.api.Plugin
+package target
+
+import helpers.ConventionPlugin
+import helpers.KotlinMultiplatformConventionExtension
+import helpers.modulePackageName
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 
-class IosTargetConventionPlugin : Plugin<Project> {
-    override fun apply(target: Project): Unit = with(target) {
-        // Access the libs.versions.toml
-        val libs = getLibs()
+@Suppress("unused")
+class IosTargetCP : ConventionPlugin() {
 
-        // Import kotlin multiplatform library
-        plugins.apply(libs.findPlugin("kotlinMultiplatform").get().get().pluginId)
+    override fun getPluginAliases() = listOf(
+        "kotlinMultiplatform",
+    )
 
+    override fun KotlinMultiplatformExtension.kotlinBlock(target: Project): Unit = with(target) {
         // linkerOpts helper
         val extension =
-            extensions.create("iosConventionExtension", KotlinMultiplatformConventionExtension::class.java)
+            extensions.create(
+                "iosConventionExtension",
+                KotlinMultiplatformConventionExtension::class.java
+            )
 
         // kotlin block {}
         extensions.configure<KotlinMultiplatformExtension> {
@@ -30,4 +37,5 @@ class IosTargetConventionPlugin : Plugin<Project> {
             }
         }
     }
+
 }

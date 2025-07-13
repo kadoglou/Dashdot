@@ -1,22 +1,18 @@
-import org.gradle.api.Plugin
+package other
+
+import helpers.ConventionPlugin
+import helpers.commonDependencies
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.configure
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import org.jetbrains.kotlin.gradle.plugin.KotlinDependencyHandler
 
-class GlobalDependencyInjectionConventionPlugin : Plugin<Project> {
-    override fun apply(target: Project): Unit = with(target) {
-        // Dependencies
-        extensions.configure<KotlinMultiplatformExtension> {
+@Suppress("unused")
+class GlobalDependencyInjectionCP : ConventionPlugin() {
 
-            sourceSets.configureEach {
-                when (name) {
-                    "commonMain" -> dependencies {
-                        autoIncludeDiModules(target)
-                        autoIncludeScreenModules(target)
-                    }
-                }
-            }
+    override fun KotlinMultiplatformExtension.kotlinBlock(target: Project): Unit = with(target) {
+        commonDependencies {
+            autoIncludeDiModules(target)
+            autoIncludeScreenModules(target)
         }
     }
 }

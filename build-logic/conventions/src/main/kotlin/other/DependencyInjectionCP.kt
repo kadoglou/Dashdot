@@ -1,26 +1,19 @@
-import org.gradle.api.Plugin
+package other
+
+import helpers.ConventionPlugin
+import helpers.commonDependencies
+import helpers.modulePathWithoutName
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.configure
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 import org.jetbrains.kotlin.gradle.plugin.KotlinDependencyHandler
 
-class DependencyInjectionConventionPlugin : Plugin<Project> {
-    override fun apply(target: Project): Unit = with(target) {
-        // Access the libs.versions.toml
-        val libs = getLibs()
+@Suppress("unused")
+class DependencyInjectionCP : ConventionPlugin() {
 
-        // Dependencies
-        extensions.configure<KotlinMultiplatformExtension> {
-
-            sourceSets.configureEach {
-                when (name) {
-                    "commonMain" -> dependencies {
-
-                        implementation(libs.findLibrary("koin.core").get().get())
-                        autoIncludeSiblingModules(target)
-                    }
-                }
-            }
+    override fun KotlinMultiplatformExtension.kotlinBlock(target: Project): Unit = with(target) {
+        commonDependencies {
+            implementation(libs.findLibrary("koin.core").get().get())
+            autoIncludeSiblingModules(target)
         }
     }
 }

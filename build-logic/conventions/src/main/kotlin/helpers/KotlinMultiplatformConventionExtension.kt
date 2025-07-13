@@ -1,3 +1,5 @@
+package helpers
+
 /**
  * Use to pass further linker opts for ios Target in multiplatform project.
  */
