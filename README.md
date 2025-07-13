@@ -183,7 +183,7 @@ flowchart TD
 - [ ] How to use your own Firebase explanation.
 - [ ] Write down a list of the tools used for the project, like Koin, RoomDB etc...
 #### Gradle scripts
-- [ ] Re-organize scripts in packages.
+- [x] Re-organize scripts in packages.
 - [ ] Check and refactor duplication of code.
 #### Design
 - [ ] Add design documentation.
